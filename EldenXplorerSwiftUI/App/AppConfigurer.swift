@@ -32,7 +32,7 @@ enum AppConfigurer {
       let bossRepository = DependencyContainer.shared.resolve(type: .closureBased, for: BossRepository.self)
 
       return FetchBossesUseCase(bossRepository: bossRepository)
-    }), for: FetchBossesUseCase.self)
+    }), for: FetchBossesUseCaseProtocol.self)
 
   }
 

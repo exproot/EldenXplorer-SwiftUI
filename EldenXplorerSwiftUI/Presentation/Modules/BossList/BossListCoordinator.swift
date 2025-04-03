@@ -16,7 +16,7 @@ final class BossListCoordinator {
   }
 
   func makeViewController() -> UIViewController {
-    let fetchBossesUseCase = DependencyContainer.shared.resolve(type: .closureBased, for: FetchBossesUseCase.self)
+    let fetchBossesUseCase = DependencyContainer.shared.resolve(type: .closureBased, for: FetchBossesUseCaseProtocol.self)
     let viewModel = BossListViewModel(fetchBossesUseCase: fetchBossesUseCase, onGoToDetails: pushDetail)
     let view = BossListView(viewModel: viewModel)
     let hostingVC = UIHostingController(rootView: view)
