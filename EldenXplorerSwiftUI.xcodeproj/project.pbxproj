@@ -8,10 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		707AD28A2D9EF8CE00BC7E17 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 707AD2892D9EF8CE00BC7E17 /* Moya */; };
+		70C26F132DA03B9A00930A52 /* DependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = 70C26F122DA03B9A00930A52 /* DependencyContainer */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70C26E4E2DA02DC600930A52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 707AD2562D9EEE9800BC7E17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 707AD25D2D9EEE9800BC7E17;
+			remoteInfo = EldenXplorerSwiftUI;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		707AD25E2D9EEE9800BC7E17 /* EldenXplorerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EldenXplorerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70C26E4A2DA02DC600930A52 /* EldenXplorerSwiftUI_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EldenXplorerSwiftUI_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70C26E922DA02DF500930A52 /* EldenXplorerSwiftUI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EldenXplorerSwiftUI.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -33,6 +46,16 @@
 			path = EldenXplorerSwiftUI;
 			sourceTree = "<group>";
 		};
+		70C26E052DA0285500930A52 /* Packages */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		70C26E4B2DA02DC600930A52 /* EldenXplorerSwiftUI_Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EldenXplorerSwiftUI_Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +64,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				707AD28A2D9EF8CE00BC7E17 /* Moya in Frameworks */,
+				70C26F132DA03B9A00930A52 /* DependencyContainer in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70C26E472DA02DC600930A52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +81,11 @@
 		707AD2552D9EEE9800BC7E17 = {
 			isa = PBXGroup;
 			children = (
+				70C26E922DA02DF500930A52 /* EldenXplorerSwiftUI.xctestplan */,
+				70C26E052DA0285500930A52 /* Packages */,
 				707AD2602D9EEE9800BC7E17 /* EldenXplorerSwiftUI */,
+				70C26E4B2DA02DC600930A52 /* EldenXplorerSwiftUI_Tests */,
+				70C26F112DA03B9A00930A52 /* Frameworks */,
 				707AD25F2D9EEE9800BC7E17 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,8 +94,16 @@
 			isa = PBXGroup;
 			children = (
 				707AD25E2D9EEE9800BC7E17 /* EldenXplorerSwiftUI.app */,
+				70C26E4A2DA02DC600930A52 /* EldenXplorerSwiftUI_Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		70C26F112DA03B9A00930A52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,14 +123,39 @@
 			);
 			fileSystemSynchronizedGroups = (
 				707AD2602D9EEE9800BC7E17 /* EldenXplorerSwiftUI */,
+				70C26E052DA0285500930A52 /* Packages */,
 			);
 			name = EldenXplorerSwiftUI;
 			packageProductDependencies = (
 				707AD2892D9EF8CE00BC7E17 /* Moya */,
+				70C26F122DA03B9A00930A52 /* DependencyContainer */,
 			);
 			productName = EldenXplorerSwiftUI;
 			productReference = 707AD25E2D9EEE9800BC7E17 /* EldenXplorerSwiftUI.app */;
 			productType = "com.apple.product-type.application";
+		};
+		70C26E492DA02DC600930A52 /* EldenXplorerSwiftUI_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70C26E522DA02DC600930A52 /* Build configuration list for PBXNativeTarget "EldenXplorerSwiftUI_Tests" */;
+			buildPhases = (
+				70C26E462DA02DC600930A52 /* Sources */,
+				70C26E472DA02DC600930A52 /* Frameworks */,
+				70C26E482DA02DC600930A52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70C26E4F2DA02DC600930A52 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				70C26E4B2DA02DC600930A52 /* EldenXplorerSwiftUI_Tests */,
+			);
+			name = EldenXplorerSwiftUI_Tests;
+			packageProductDependencies = (
+			);
+			productName = EldenXplorerSwiftUI_Tests;
+			productReference = 70C26E4A2DA02DC600930A52 /* EldenXplorerSwiftUI_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -101,6 +169,10 @@
 				TargetAttributes = {
 					707AD25D2D9EEE9800BC7E17 = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					70C26E492DA02DC600930A52 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 707AD25D2D9EEE9800BC7E17;
 					};
 				};
 			};
@@ -122,12 +194,20 @@
 			projectRoot = "";
 			targets = (
 				707AD25D2D9EEE9800BC7E17 /* EldenXplorerSwiftUI */,
+				70C26E492DA02DC600930A52 /* EldenXplorerSwiftUI_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		707AD25C2D9EEE9800BC7E17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70C26E482DA02DC600930A52 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -144,7 +224,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		70C26E462DA02DC600930A52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70C26E4F2DA02DC600930A52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 707AD25D2D9EEE9800BC7E17 /* EldenXplorerSwiftUI */;
+			targetProxy = 70C26E4E2DA02DC600930A52 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		707AD2722D9EEE9900BC7E17 /* Debug */ = {
@@ -332,6 +427,44 @@
 			};
 			name = Release;
 		};
+		70C26E502DA02DC600930A52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8WMXKK3LQU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ertan.EldenXplorerSwiftUI-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EldenXplorerSwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EldenXplorerSwiftUI";
+			};
+			name = Debug;
+		};
+		70C26E512DA02DC600930A52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8WMXKK3LQU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ertan.EldenXplorerSwiftUI-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EldenXplorerSwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EldenXplorerSwiftUI";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -349,6 +482,15 @@
 			buildConfigurations = (
 				707AD2722D9EEE9900BC7E17 /* Debug */,
 				707AD2732D9EEE9900BC7E17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70C26E522DA02DC600930A52 /* Build configuration list for PBXNativeTarget "EldenXplorerSwiftUI_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70C26E502DA02DC600930A52 /* Debug */,
+				70C26E512DA02DC600930A52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -371,6 +513,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 707AD2882D9EF8CE00BC7E17 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		70C26F122DA03B9A00930A52 /* DependencyContainer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DependencyContainer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

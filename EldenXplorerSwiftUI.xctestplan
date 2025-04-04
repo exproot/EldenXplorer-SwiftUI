@@ -1,0 +1,36 @@
+{
+  "configurations" : [
+    {
+      "id" : "F948F276-6718-4BD7-A132-08E608D538B1",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:EldenXplorerSwiftUI.xcodeproj",
+      "identifier" : "707AD25D2D9EEE9800BC7E17",
+      "name" : "EldenXplorerSwiftUI"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:EldenXplorerSwiftUI.xcodeproj",
+        "identifier" : "70C26E492DA02DC600930A52",
+        "name" : "EldenXplorerSwiftUI_Tests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/DependencyContainer",
+        "identifier" : "DependencyContainerTests",
+        "name" : "DependencyContainerTests"
+      }
+    }
+  ],
+  "version" : 1
+}

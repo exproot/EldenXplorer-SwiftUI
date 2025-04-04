@@ -5,6 +5,7 @@
 //  Created by Ertan Yağmur on 3.04.2025.
 //
 
+import DependencyContainer
 import SwiftUI
 
 final class BossListCoordinator {
@@ -16,7 +17,7 @@ final class BossListCoordinator {
   }
 
   func makeViewController() -> UIViewController {
-    let fetchBossesUseCase = DependencyContainer.shared.resolve(type: .closureBased, for: FetchBossesUseCaseProtocol.self)
+    let fetchBossesUseCase = DC.shared.resolve(type: .closureBased, for: FetchBossesUseCaseProtocol.self)
     let viewModel = BossListViewModel(fetchBossesUseCase: fetchBossesUseCase, onGoToDetails: pushDetail)
     let view = BossListView(viewModel: viewModel)
     let hostingVC = UIHostingController(rootView: view)

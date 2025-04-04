@@ -5,7 +5,7 @@
 //  Created by Ertan Yağmur on 3.04.2025.
 //
 
-
+import DependencyContainer
 import Foundation
 
 enum AppConfigurer {
@@ -20,16 +20,16 @@ enum AppConfigurer {
 
     didConfigureDependencies = true
 
-    DependencyContainer.shared.register(type: .singleInstance(NetworkManager()), for: Networkable.self)
+    DC.shared.register(type: .singleInstance(NetworkManager()), for: Networkable.self)
 
-    DependencyContainer.shared.register(type: .closureBased({
-      let networkManager = DependencyContainer.shared.resolve(type: .singleInstance, for: Networkable.self)
+    DC.shared.register(type: .closureBased({
+      let networkManager = DC.shared.resolve(type: .singleInstance, for: Networkable.self)
 
       return BossRepositoryImpl(networkManager: networkManager)
     }), for: BossRepository.self)
 
-    DependencyContainer.shared.register(type: .closureBased({
-      let bossRepository = DependencyContainer.shared.resolve(type: .closureBased, for: BossRepository.self)
+    DC.shared.register(type: .closureBased({
+      let bossRepository = DC.shared.resolve(type: .closureBased, for: BossRepository.self)
 
       return FetchBossesUseCase(bossRepository: bossRepository)
     }), for: FetchBossesUseCaseProtocol.self)

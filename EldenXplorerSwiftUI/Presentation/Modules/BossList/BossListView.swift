@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BossListView: View {
 
-  @StateObject var viewModel: BossListViewModel
+  @ObservedObject var viewModel: BossListViewModel
 
   var body: some View {
 
